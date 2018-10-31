@@ -7,6 +7,14 @@ const int fim = 9;
 int matriz[fim];
 int inicio = 0;
 
+//move cursor na posicao indicada
+void posicaoXY(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
 // limpa tela e volta o cursor a posição original
 void limpa(void) {
     HANDLE TELA;
